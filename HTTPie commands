@@ -1,0 +1,6 @@
+1_ http GET localhost:3001/posts
+2_ http POST localhost:3001/posts title="WDC" content="World domination cat"
+3_ http PUT localhost:3001/posts/3 content="We dislike chess"
+4_ http GET localhost:3001/posts/3
+5_ http DELETE localhost:3001/posts/3
+6_ http GET localhost:3001/posts

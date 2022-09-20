@@ -46,5 +46,11 @@ router.delete('/:postId', (req, res) => {
 
 // Update
 // TODO: Implement the update action here
+router.put('/:postId', (req, res) => {
+ // Update the specified post record from the database
+  models.Post.findById(req.params.postId)
+    .then(post => post.update(postFilter(req.body)))
+    .then(post => res.json(post))
+ });
 
 module.exports = router;
